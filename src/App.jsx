@@ -12,7 +12,7 @@ import { getBooks } from "./clients/books.api";
 function App() {
   const [books, setBooks] = useState([]);
   const [cart, setCart] = useState([]);
-  const [isCartVisible, setIsCartVisible] = useState(false);
+  let isCartVisible = false;
 
   useEffect(() => {
     fetchBooks();
@@ -32,11 +32,11 @@ function App() {
   };
 
   const showCart = () => {
-    setIsCartVisible(true);
+    isCartVisible = true;
   };
 
   const hideCart = () => {
-    setIsCartVisible(false);
+    isCartVisible = false;
   };
 
   return (
