@@ -47,7 +47,7 @@ function App() {
           <Header onCartClick={showCart} />
           <Routes>
             <Route path="/books" element={<Catalog items={books} />} />
-            <Route path="*" element={<Navigate to="/books" replace />} />
+            <Route path="/books/:isbn" element={<BookDetails onAddToCart={addBookToCart} />} />
           </Routes>
         </BookCartContext.Provider>
         <Footer />

@@ -1,6 +1,6 @@
 fileignoreconfig:
 - filename: package-lock.json
-  checksum: dd6fa752ef26733ea15add88a5b298c1fdf3ca1831e9e4dcca861a1bfc4f0100
+  checksum: b8c337b5c3d825a9197d2cbb6ec352122ebd85fdd8c04db116eac9765778560c
 - filename: server/package-lock.json
   checksum: 49f5248fb859ec38bd5d10f8a0a31cdd2f192265ede6a255ccb80dd07d7ae50c
 - filename: src/components/cart/index.jsx
