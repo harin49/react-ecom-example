@@ -4,8 +4,7 @@ import OrderItem from './orderItem';
 import EmptyCart from './emptyCart';
 import CartHeader from './cartHeader';
 
-export function CartPreview({ isVisible, onCartCloseClick }) {
-    const { cart: items } = useBookCartProps();
+export function CartPreview({ isVisible, onCartCloseClick, items }) {
 
     const calculateDiscountedPrice = (item) => {
         return item.price * (100 - item.discount) / 100;

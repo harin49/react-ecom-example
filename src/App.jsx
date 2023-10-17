@@ -42,14 +42,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <BookCartContext.Provider value={{ cart, setCart }}>
-          <CartPreview isVisible={isCartVisible} onCartCloseClick={hideCart} />
+          <CartPreview isVisible={isCartVisible} onCartCloseClick={hideCart} items={cart} />
           <Header onCartClick={showCart} />
           <Routes>
             <Route path="/books" element={<Catalog items={books} />} />
             <Route path="/books/:isbn" element={<BookDetails onAddToCart={addBookToCart} />} />
           </Routes>
-        </BookCartContext.Provider>
         <Footer />
       </div>
     </Router>
