@@ -15,7 +15,7 @@ const BookCard = ({ book }) => {
       className="w-80 mx-10 my-11 transform rounded-lg bg-white duration-300 hover:scale-105 hover:shadow-lg"
     >
       <Thumbnail url={thumbnailUrl} title={title} size="medium" />
-      <BookTitle title={title} size="medium" />
+      <BookTitle title={title} />
       <BookPriceAndRating price={price} rating={rating} discount={discount} />
     </Link>
   );
