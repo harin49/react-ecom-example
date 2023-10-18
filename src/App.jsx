@@ -45,6 +45,7 @@ function App() {
           <CartPreview isVisible={isCartVisible} onCartCloseClick={hideCart} items={cart} />
           <Header onCartClick={showCart} />
           <Routes>
+            <Route path="/" exact element={<></>} />
             <Route path="/books" element={<Catalog items={books} />} />
             <Route path="/books/:isbn" element={<BookDetails onAddToCart={addBookToCart} />} />
           </Routes>
