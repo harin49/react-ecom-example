@@ -13,7 +13,7 @@ import {Home} from "./components/Home/Home";
 function App() {
   const [books, setBooks] = useState([]);
   const [cart, setCart] = useState([]);
-  let isCartVisible = false;
+  const [isCartVisible, setIsCartVisible] = useState(false);
 
   useEffect(() => {
     fetchBooks();
@@ -33,11 +33,11 @@ function App() {
   };
 
   const showCart = () => {
-    isCartVisible = true;
+    setIsCartVisible(true);
   };
 
   const hideCart = () => {
-    isCartVisible = false;
+    setIsCartVisible(false)
   };
 
   return (
