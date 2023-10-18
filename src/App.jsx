@@ -42,6 +42,7 @@ function App() {
 
   return (
     <Router>
+      <BookCartContext.Provider value={{ cart, setCart }}>
       <div className="App">
           <CartPreview isVisible={isCartVisible} onCartCloseClick={hideCart} items={cart} />
           <Header onCartClick={showCart} />
@@ -52,6 +53,7 @@ function App() {
           </Routes>
         <Footer />
       </div>
+      </BookCartContext.Provider>
     </Router>
   );
 }
