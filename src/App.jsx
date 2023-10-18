@@ -9,6 +9,7 @@ import { CartPreview } from "./components/cart";
 import { BookCartContext } from "./contexts/context";
 import { getBooks } from "./clients/books.api";
 import {Home} from "./components/Home/Home";
+import {BookDetailsWithISBN} from "./components/BookDetailsWithISBN/BookDetailsWithISBN"
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -49,7 +50,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/books" element={<Catalog items={books} />} />
-            <Route path="/books/:isbn" element={<BookDetails onAddToCart={addBookToCart} />} />
+            <Route path="/books/:isbn" element={<BookDetailsWithISBN />} />
           </Routes>
         <Footer />
       </div>
