@@ -8,6 +8,7 @@ import Footer from "./components/common/footer";
 import { CartPreview } from "./components/cart";
 import { BookCartContext } from "./contexts/context";
 import { getBooks } from "./clients/books.api";
+import {Home} from "./components/Home/Home";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -45,6 +46,7 @@ function App() {
           <CartPreview isVisible={isCartVisible} onCartCloseClick={hideCart} items={cart} />
           <Header onCartClick={showCart} />
           <Routes>
+            <Route path="/" exact element={<Home />} />
             <Route path="/books" element={<Catalog items={books} />} />
             <Route path="/books/:isbn" element={<BookDetails onAddToCart={addBookToCart} />} />
           </Routes>
