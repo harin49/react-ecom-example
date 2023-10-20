@@ -9,3 +9,5 @@ An example application of online book cart used during react introduction sessio
 # Development
 1. Install all the dependencies `npm i`
 2. Run the application `npm start`
+
+Your application will start in browser - localhost:3000
